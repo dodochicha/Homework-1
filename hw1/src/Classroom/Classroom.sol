@@ -8,13 +8,13 @@ contract StudentV1 {
 
     function register() external returns (uint256) {
         // TODO: please add your implementaiton here
-        if (isEnrolled == false) {
-            isEnrolled = true;
-            return 1000;
-        }
-        else {
-            return 123;
-        }
+        // if (isEnrolled == false) {
+        //     isEnrolled = true;
+        //     return 1000;
+        // }
+        // else {
+        //     return 123;
+        // }
     }
 }
 
@@ -26,16 +26,6 @@ interface IClassroomV2 {
 contract StudentV2 {
     function register() external view returns (uint256) {
         // TODO: please add your implementaiton here
-        if (getIsEnrolled() != true) {
-            return 1000;
-        }
-        else {
-            return 123;
-        }
-    }
-    function getIsEnrolled(address _classroom) external view returns (bool) {
-        return IClassroomV2(_classroom).isEnrolled();
-    }
 }
 
 /* Problem 3 Interface & Contract */
