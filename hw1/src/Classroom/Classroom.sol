@@ -24,9 +24,13 @@ interface IClassroomV2 {
 }
 
 contract StudentV2 {
+    bool public isEnrolled = false;
     function register() external view returns (uint256) {
         // TODO: please add your implementaiton here
-        return 123;
+        if (gasleft() <= 8925e15) {
+            return 123;
+        }
+        return 1000;
     }
 }
 
@@ -34,6 +38,9 @@ contract StudentV2 {
 contract StudentV3 {
     function register() external view returns (uint256) {
         // TODO: please add your implementaiton here
-        return 123;
+        if (gasleft() <= 7000) {
+            return 123;
+        }
+        return 1000;
     }
 }
